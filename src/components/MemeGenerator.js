@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 
 
 class MemeGenerator extends Component {
+
     constructor() {
         super()
         this.state = {
             topText: "",
             bottomText: "",
-            randomImg: "http://i.imgflip.com/1bij.jpg",
+            randomImg: "https://i.imgflip.com/1ur9b0.jpg",
             allMemeImg: [],
             sugestionImgOne: "",
             sugestionImgTwo: ""
@@ -53,6 +54,7 @@ class MemeGenerator extends Component {
     }
 
     render() {
+
         return (
             <div className="grid">
                 <form className="meme-form" onSubmit={this.handleSubmit}>
@@ -64,13 +66,14 @@ class MemeGenerator extends Component {
                         placeholder="Top Text"
                     />
                     <input
+                        className="bottomText"
                         type="textbox"
                         name="bottomText"
                         value={this.setState.bottomText}
                         onChange={this.handleChange}
                         placeholder="Bottom Text"
                     />
-                    <button>Gen</button>
+                    <button className="submitButton">Gen</button>
                 </form>
 
                 <div className="meme">
